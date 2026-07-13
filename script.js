@@ -97,7 +97,7 @@ quoteForm?.addEventListener("submit", (event) => {
   const detalhes = formData.get("detalhes")?.toString().trim();
 
   const message = [
-    "Olá, João Frio! Tudo bem?",
+    "Olá, JoãoFrio! Tudo bem?",
     `Vim pelo site. Meu nome é ${nome}.`,
     servico ? `Quero orçamento para: ${servico}.` : "",
     cidade ? `Cidade: ${cidade}.` : "",
