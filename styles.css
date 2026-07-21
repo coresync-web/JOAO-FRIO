@@ -688,67 +688,46 @@ h3 {
   color: var(--navy);
 }
 
-.clients-marquee {
+.client-logo-marquee {
   overflow: hidden;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.14);
-  padding: 16px 0;
+  padding: 18px 0;
   background: rgba(255, 255, 255, 0.06);
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.2);
 }
 
-.featured-clients {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-  margin-bottom: 18px;
-}
-
-.featured-clients article {
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 8px;
-  padding: 18px;
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
-}
-
-.featured-clients strong,
-.featured-clients span {
-  display: block;
-}
-
-.featured-clients strong {
-  color: var(--white);
-  font-size: clamp(1rem, 1.6vw, 1.35rem);
-}
-
-.featured-clients span {
-  margin-top: 6px;
-  color: rgba(255, 255, 255, 0.62);
-  font-size: 0.84rem;
-}
-
-.clients-track {
+.client-logo-track {
   display: flex;
   width: max-content;
-  gap: 14px;
-  animation: marquee 30s linear infinite;
+  gap: 16px;
+  animation: marquee 34s linear infinite;
 }
 
-.clients-track span {
-  display: inline-flex;
-  min-height: 48px;
-  align-items: center;
-  justify-content: center;
+.client-logo-track article {
+  display: grid;
+  width: clamp(190px, 18vw, 260px);
+  min-height: 118px;
+  flex: 0 0 auto;
+  place-items: center;
+  overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
-  padding: 10px 22px;
+  padding: 18px;
   background: var(--white);
-  color: var(--navy);
-  font-size: 0.95rem;
-  font-weight: 900;
-  white-space: nowrap;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.client-logo-track article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.22);
+}
+
+.client-logo-track img {
+  width: 100%;
+  height: 86px;
+  object-fit: contain;
 }
 
 .section-heading {
@@ -1460,10 +1439,6 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .featured-clients {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .service-detail-section {
     grid-template-columns: 1fr;
   }
@@ -1637,18 +1612,27 @@ h3 {
     gap: 10px;
   }
 
-  .featured-clients {
-    grid-template-columns: 1fr;
-  }
-
   .overview-list article {
     padding: 16px;
   }
 
-  .clients-track span {
-    min-height: 42px;
-    padding: 8px 16px;
-    font-size: 0.86rem;
+  .client-logo-marquee {
+    padding: 14px 0;
+  }
+
+  .client-logo-track {
+    gap: 12px;
+    animation-duration: 26s;
+  }
+
+  .client-logo-track article {
+    width: 190px;
+    min-height: 112px;
+    padding: 14px;
+  }
+
+  .client-logo-track img {
+    height: 72px;
   }
 
   .gallery-item,
